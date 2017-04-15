@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "runnerty-executor-check-online-service",
+  "definitions": {
+    "config":
+      { "type": "object",
+        "required": ["id","type"],
+        "properties":{
+          "id": {"type": "string"},
+          "type": {"type": "string", "pattern": "\\brunnerty-executor-check-online-service\\b"},
+          "hostname": {"type": "string"},
+          "method": {"type": "string"},
+          "auth": {
+            "type": "object",
+            "properties": {
+              "user": {"type": "string"},
+              "pass": {"type": "string"},
+              "sendImmediately": {"type": "boolean"},
+              "bearer": {"type": "string"}
+            }
+          }
+      }
+    },
+    "params":
+    { "type": "object",
+      "required": ["id"],
+      "properties":{
+        "id": {"type": "string"},
+        "hostname": {"type": "string"},
+        "method": {"type": "string"},
+        "check_contains": {"type": "string"},
+        "auth": {
+          "type": "object",
+          "properties": {
+            "user": {"type": "string"},
+            "pass": {"type": "string"},
+            "sendImmediately": {"type": "boolean"},
+            "bearer": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}
