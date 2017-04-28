@@ -7,7 +7,7 @@
         "required": ["id","type"],
         "properties":{
           "id": {"type": "string"},
-          "type": {"type": "string", "pattern": "\\brunnerty-executor-check-online-service\\b"},
+          "type": {"type": "string", "pattern": "runnerty-executor-check-online-service"},
           "hostname": {"type": "string"},
           "method": {"type": "string"},
           "auth": {
