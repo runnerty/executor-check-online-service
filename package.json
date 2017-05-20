@@ -1,9 +1,9 @@
 {
-  "name": "runnerty-executor-check-online-service",
-  "version": "1.0.1",
+  "name": "@runnerty/executor-check-online-service",
+  "version": "0.0.1",
   "description": "Runnerty module: Check Online Service Executor",
   "author": "Coderty",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
