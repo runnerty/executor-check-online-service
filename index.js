@@ -1,6 +1,6 @@
 "use strict";
 
-var request = require('request');
+var request = require("request");
 var Execution = global.ExecutionClass;
 
 class checkOnlineService extends Execution {
@@ -12,39 +12,40 @@ class checkOnlineService extends Execution {
     var _this = this;
 
     request({
-        method: options.method || 'GET',
-        uri: options.hostname,
-        auth: options.auth
-      },
+      method: options.method || "GET",
+      uri: options.hostname,
+      auth: options.auth
+    },
       function (err, response, body) {
+        var endOptions = {};
         if (err) {
-          var endOptions = {
-            end: 'error',
+          endOptions = {
+            end: "error",
             messageLog: `Host ${options.hostname} : ${err}`,
             execute_err_return: `Host ${options.hostname} ${err}`,
-            execute_return: ''
+            execute_return: ""
           };
           _this.end(endOptions);
         } else {
           if (options.check_contains) {
-            var re = new RegExp(options.check_contains, 'i');
+            var re = new RegExp(options.check_contains, "i");
             if (re.test(body)) {
-              var endOptions = {
-                end: 'end'
+              endOptions = {
+                end: "end"
               };
               _this.end(endOptions);
             } else {
-              var endOptions = {
-                end: 'error',
+              endOptions = {
+                end: "error",
                 messageLog: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
                 execute_err_return: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
-                execute_return: ''
+                execute_return: ""
               };
               _this.end(endOptions);
             }
           } else {
-            var endOptions = {
-              end: 'end'
+            endOptions = {
+              end: "end"
             };
             _this.end(endOptions);
           }
