@@ -1,41 +1,79 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "runnerty-executor-check-online-service",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "@runnerty-executor-check-online-service",
   "definitions": {
-    "config":
-      { "type": "object",
-        "required": ["id","type"],
-        "properties":{
-          "id": {"type": "string"},
-          "type": {"type": "string", "pattern": "runnerty-executor-check-online-service"},
-          "hostname": {"type": "string"},
-          "method": {"type": "string"},
-          "auth": {
-            "type": "object",
-            "properties": {
-              "user": {"type": "string"},
-              "pass": {"type": "string"},
-              "sendImmediately": {"type": "boolean"},
-              "bearer": {"type": "string"}
-            }
-          }
-      }
-    },
-    "params":
-    { "type": "object",
-      "required": ["id"],
-      "properties":{
-        "id": {"type": "string"},
-        "hostname": {"type": "string"},
-        "method": {"type": "string"},
-        "check_contains": {"type": "string"},
+    "config": {
+      "type": "object",
+      "required": [
+        "id",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "@runnerty-executor-check-online-service"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
         "auth": {
           "type": "object",
           "properties": {
-            "user": {"type": "string"},
-            "pass": {"type": "string"},
-            "sendImmediately": {"type": "boolean"},
-            "bearer": {"type": "string"}
+            "user": {
+              "type": "string"
+            },
+            "pass": {
+              "type": "string"
+            },
+            "sendImmediately": {
+              "type": "boolean"
+            },
+            "bearer": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "params": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "check_contains": {
+          "type": "string"
+        },
+        "auth": {
+          "type": "object",
+          "properties": {
+            "user": {
+              "type": "string"
+            },
+            "pass": {
+              "type": "string"
+            },
+            "sendImmediately": {
+              "type": "boolean"
+            },
+            "bearer": {
+              "type": "string"
+            }
           }
         }
       }
