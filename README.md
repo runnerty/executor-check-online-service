@@ -4,7 +4,7 @@
 ```json
 {
   "id": "check_online_service_default",
-  "type": "@runnerty/executor-check-online-service"
+  "type": "@runnerty-executor-check-online-service"
 }
 ```
 
