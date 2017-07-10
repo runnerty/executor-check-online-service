@@ -22,8 +22,8 @@ class checkOnlineService extends Execution {
           endOptions = {
             end: "error",
             messageLog: `Host ${options.hostname} : ${err}`,
-            execute_err_return: `Host ${options.hostname} ${err}`,
-            execute_return: ""
+            err_output: `Host ${options.hostname} ${err}`,
+            msg_output: ""
           };
           _this.end(endOptions);
         } else {
@@ -38,8 +38,8 @@ class checkOnlineService extends Execution {
               endOptions = {
                 end: "error",
                 messageLog: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
-                execute_err_return: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
-                execute_return: ""
+                err_output: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
+                msg_output: ""
               };
               _this.end(endOptions);
             }
