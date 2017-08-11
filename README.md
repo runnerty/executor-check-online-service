@@ -10,7 +10,8 @@
 
 ### Plan sample:
 ```json
-{ "id":"check_online_service_default",  
+{ 
+  "id":"check_online_service_default",  
   "hostname": "http://www.google.es",
   "check_contains": "Voy a tener suerte"
 }
@@ -18,7 +19,8 @@
 
 ### Plan advanced:
 ```json
-{ "id":"check_online_service_default",  
+{ 
+  "id":"check_online_service_default",  
   "hostname": "http://www.google.es",
   "check_contains": "Voy a tener suerte",
   "method": "GET",
