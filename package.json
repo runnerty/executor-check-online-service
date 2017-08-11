@@ -1,13 +1,13 @@
 {
   "name": "@runnerty/executor-check-online-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Runnerty module: Check Online Service Executor",
   "author": "Coderty",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Coderty/runnerty-executor-check-online-service.git"
+    "url": "git+https://github.com/runnerty/executor-check-online-service.git"
   },
   "keywords": [
     "runnerty",
@@ -17,9 +17,9 @@
     "online site"
   ],
   "bugs": {
-    "url": "https://github.com/Coderty/runnerty-executor-check-online-service/issues"
+    "url": "https://github.com/runnerty/executor-check-online-service/issues"
   },
-  "homepage": "https://github.com/Coderty/runnerty-executor-check-online-service#readme",
+  "homepage": "https://github.com/runnerty/executor-check-online-service#readme",
   "dependencies": {
     "request": "^2.81.0"
   }
