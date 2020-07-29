@@ -1,6 +1,6 @@
 {
   "name": "@runnerty/executor-check-online-service",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Runnerty module: Check Online Service Executor",
   "author": "Coderty",
   "license": "MIT",
@@ -14,13 +14,25 @@
     "executor",
     "check online service",
     "check",
-    "online site"
+    "online site",
+    "health",
+    "health server",
+    "health monitoring"
   ],
   "bugs": {
     "url": "https://github.com/runnerty/executor-check-online-service/issues"
   },
   "homepage": "https://github.com/runnerty/executor-check-online-service#readme",
+  "scripts": {
+    "lint": "eslint '**/*.js' && prettier --check '**'"
+  },
   "dependencies": {
-    "request": "^2.81.0"
+    "axios": "0.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
   }
 }

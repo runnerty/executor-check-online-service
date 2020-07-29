@@ -4,10 +4,7 @@
   "definitions": {
     "config": {
       "type": "object",
-      "required": [
-        "id",
-        "type"
-      ],
+      "required": ["id", "type"],
       "properties": {
         "id": {
           "type": "string"
@@ -43,9 +40,7 @@
     },
     "params": {
       "type": "object",
-      "required": [
-        "id"
-      ],
+      "required": ["id"],
       "properties": {
         "id": {
           "type": "string"
@@ -59,19 +54,16 @@
         "check_contains": {
           "type": "string"
         },
+        "headers": {
+          "type": "object"
+        },
         "auth": {
           "type": "object",
-          "properties": {
-            "user": {
+          "items": {
+            "username": {
               "type": "string"
             },
-            "pass": {
-              "type": "string"
-            },
-            "sendImmediately": {
-              "type": "boolean"
-            },
-            "bearer": {
+            "password": {
               "type": "string"
             }
           }

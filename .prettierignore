@@ -1,0 +1,12 @@
+node_modules
+.eslintignore
+.gitignore
+.prettierignore
+.npmignore
+LICENSE
+*.png
+*.txt
+TODO
+*.md
+test.log
+.DS_Store

@@ -1,56 +1,48 @@
-"use strict";
+'use strict';
 
-var request = require("request");
-var Execution = global.ExecutionClass;
+const axios = require('axios');
+const Execution = global.ExecutionClass;
 
 class checkOnlineService extends Execution {
   constructor(process) {
     super(process);
   }
 
-  exec(options) {
-    var _this = this;
+  async exec(options) {
+    let endOptions = {
+      end: 'end'
+    };
+    try {
+      const values = {
+        method: options.method || 'GET',
+        url: options.hostname,
+        auth: options.auth,
+        headers: options.headers
+      };
+      const response = await axios(values);
 
-    request({
-      method: options.method || "GET",
-      uri: options.hostname,
-      auth: options.auth
-    },
-      function (err, response, body) {
-        var endOptions = {};
-        if (err) {
-          endOptions = {
-            end: "error",
-            messageLog: `Host ${options.hostname} : ${err}`,
-            err_output: `Host ${options.hostname} ${err}`,
-            msg_output: ""
-          };
-          _this.end(endOptions);
+      if (options.check_contains) {
+        const re = new RegExp(options.check_contains, 'i');
+        if (re.test(response.data)) {
+          this.end(endOptions);
         } else {
-          if (options.check_contains) {
-            var re = new RegExp(options.check_contains, "i");
-            if (re.test(body)) {
-              endOptions = {
-                end: "end"
-              };
-              _this.end(endOptions);
-            } else {
-              endOptions = {
-                end: "error",
-                messageLog: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
-                err_output: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
-                msg_output: ""
-              };
-              _this.end(endOptions);
-            }
-          } else {
-            endOptions = {
-              end: "end"
-            };
-            _this.end(endOptions);
-          }
+          endOptions = {
+            end: 'error',
+            messageLog: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
+            err_output: `Host ${options.hostname} check_contains "${options.check_contains}" test fail.`,
+            msg_output: ''
+          };
+          this.end(endOptions);
         }
-      });
+      } else {
+        this.end(endOptions);
+      }
+    } catch (err) {
+      endOptions.end = 'error';
+      endOptions.messageLog = `Host ${options.hostname} : ${err.message}`;
+      endOptions.err_output = `Host ${options.hostname} : ${err.message}`;
+      this.end(endOptions);
+    }
   }
 }
 
