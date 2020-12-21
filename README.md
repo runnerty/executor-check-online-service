@@ -31,8 +31,8 @@ Add in [plan.json]:
 ```json
 {
   "id":"check_online_service_default",
-  "hostname": "http://www.google.es",
-  "check_contains": "Voy a tener suerte"
+  "hostname": "http://www.google.com/en",
+  "check_contains": "I'm Feeling Lucky"
 }
 ```
 
@@ -41,8 +41,8 @@ Add in [plan.json]:
 ```json
 {
   "id":"check_online_service_default",
-  "hostname": "http://www.google.es",
-  "check_contains": "Voy a tener suerte",
+  "hostname": "http://www.google.com/en",
+  "check_contains": "I'm Feeling Lucky",
   "method": "GET",
   "auth":{
     "user": "user",
