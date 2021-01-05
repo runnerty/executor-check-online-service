@@ -82,3 +82,4 @@ Add in [plan.json]:
 [david-badge-url]: https://david-dm.org/runnerty/executor-check-online-service
 [config.json]: http://docs.runnerty.io/config/
 [plan.json]: http://docs.runnerty.io/plan/
+[runnerty-cli]: https://www.npmjs.com/package/runnerty-cli
