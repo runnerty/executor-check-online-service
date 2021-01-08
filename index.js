@@ -1,9 +1,9 @@
 'use strict';
 
 const axios = require('axios');
-const Execution = global.ExecutionClass;
+const Executor = require('@runnerty/module-core').Executor;
 
-class checkOnlineService extends Execution {
+class checkOnlineService extends Executor {
   constructor(process) {
     super(process);
   }

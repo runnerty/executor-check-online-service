@@ -13,8 +13,24 @@
 # Check-online-service executor for [Runnerty]:
 
 ### Installation:
+Through NPM
+
 ```bash
 npm i @runnerty/executor-check-online-service
+```
+
+You can also add modules to your project with [runnerty-cli]
+
+```bash
+npx runnerty-cli add @runnerty/executor-check-online-service
+```
+
+This command installs the module in your project, adds example configuration in your `config.json` and creates an example plan of use.
+
+If you have installed [runnerty-cli] globally you can include the module with this command:
+
+```bash
+rty add @runnerty/executor-check-online-service
 ```
 
 ### Configuration sample:
@@ -31,8 +47,8 @@ Add in [plan.json]:
 ```json
 {
   "id":"check_online_service_default",
-  "hostname": "http://www.google.es",
-  "check_contains": "Voy a tener suerte"
+  "hostname": "http://www.google.com/en",
+  "check_contains": "I'm Feeling Lucky"
 }
 ```
 
@@ -41,8 +57,8 @@ Add in [plan.json]:
 ```json
 {
   "id":"check_online_service_default",
-  "hostname": "http://www.google.es",
-  "check_contains": "Voy a tener suerte",
+  "hostname": "http://www.google.com/en",
+  "check_contains": "I'm Feeling Lucky",
   "method": "GET",
   "auth":{
     "user": "user",
@@ -66,3 +82,4 @@ Add in [plan.json]:
 [david-badge-url]: https://david-dm.org/runnerty/executor-check-online-service
 [config.json]: http://docs.runnerty.io/config/
 [plan.json]: http://docs.runnerty.io/plan/
+[runnerty-cli]: https://www.npmjs.com/package/runnerty-cli
