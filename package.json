@@ -1,6 +1,6 @@
 {
   "name": "@runnerty/executor-check-online-service",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Runnerty module: Check Online Service Executor",
   "author": "Runnerty Tech",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "lint": "eslint '**/*.js' && prettier --check '**'"
   },
   "dependencies": {
-    "@runnerty/module-core": "~3.0.3",
+    "@runnerty/module-core": "~3.0.4",
     "axios": "~0.21.1"
   },
   "devDependencies": {
