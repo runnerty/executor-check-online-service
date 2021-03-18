@@ -73,6 +73,13 @@ Add in [plan.json]:
   "headers": { "User-Agent": "runnerty", "Content-Type": "application/json" }
 }
 ```
+```json
+{
+  "id":"check_online_service_default",
+  "hostname": "http://www.myservice.com/api/health",
+  "timeout": "5s"
+}
+```
 
 [Runnerty]: http://www.runnerty.io
 [downloads-image]: https://img.shields.io/npm/dm/@runnerty/executor-check-online-service.svg

@@ -19,6 +19,9 @@
         "method": {
           "type": "string"
         },
+        "timeout": {
+          "type": "string"
+        },
         "auth": {
           "type": "object",
           "properties": {
@@ -56,6 +59,9 @@
         },
         "headers": {
           "type": "object"
+        },
+        "timeout": {
+          "type": "string"
         },
         "auth": {
           "type": "object",

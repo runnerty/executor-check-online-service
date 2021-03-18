@@ -1,6 +1,7 @@
 'use strict';
 
 const axios = require('axios');
+const ms = require('ms');
 const Executor = require('@runnerty/module-core').Executor;
 
 class checkOnlineService extends Executor {
@@ -19,6 +20,7 @@ class checkOnlineService extends Executor {
         auth: options.auth,
         headers: options.headers
       };
+      if (options.timeout) values.timeout = ms(options.timeout);
       const response = await axios(values);
 
       if (options.check_contains) {
