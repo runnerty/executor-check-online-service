@@ -2,7 +2,7 @@
   <a href="http://runnerty.io">
     <img height="257" src="https://runnerty.io/assets/header/logo-stroked.png">
   </a>
-  <p align="center">A new way for processes managing</p>
+  <p align="center">Smart Processes Management</p>
 </p>
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Dependency Status][david-badge]][david-badge-url]
@@ -10,7 +10,7 @@
   <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
 </a>
 
-# Check-online-service executor for [Runnerty]:
+# Check Online Service executor for [Runnerty]:
 
 ### Installation:
 Through NPM
@@ -19,18 +19,18 @@ Through NPM
 npm i @runnerty/executor-check-online-service
 ```
 
-You can also add modules to your project with [runnerty-cli]
+You can also add modules to your project with [runnerty]
 
 ```bash
-npx runnerty-cli add @runnerty/executor-check-online-service
+npx runnerty add @runnerty/executor-check-online-service
 ```
 
-This command installs the module in your project, adds example configuration in your `config.json` and creates an example plan of use.
+This command installs the module in your project, adds example configuration in your [config.json] and creates an example plan of use.
 
-If you have installed [runnerty-cli] globally you can include the module with this command:
+If you have installed [runnerty] globally you can include the module with this command:
 
 ```bash
-rty add @runnerty/executor-check-online-service
+runnerty add @runnerty/executor-check-online-service
 ```
 
 ### Configuration sample:
@@ -81,7 +81,7 @@ Add in [plan.json]:
 }
 ```
 
-[Runnerty]: http://www.runnerty.io
+[Runnerty]: https://www.runnerty.io
 [downloads-image]: https://img.shields.io/npm/dm/@runnerty/executor-check-online-service.svg
 [npm-url]: https://www.npmjs.com/package/@runnerty/executor-check-online-service
 [npm-image]: https://img.shields.io/npm/v/@runnerty/executor-check-online-service.svg
@@ -89,4 +89,3 @@ Add in [plan.json]:
 [david-badge-url]: https://david-dm.org/runnerty/executor-check-online-service
 [config.json]: http://docs.runnerty.io/config/
 [plan.json]: http://docs.runnerty.io/plan/
-[runnerty-cli]: https://www.npmjs.com/package/runnerty-cli
